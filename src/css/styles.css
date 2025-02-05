@@ -1,18 +1,81 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+*{
+  font-family: "Montserrat", serif
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.gallery {
+  max-width: 1128px;
+  margin: 24px auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.gallery-image {
+  width: 100%;
+}
+
+.feedback-form {
+  padding: 28px;
+  width: 200px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+
+
+input, textarea{
+  outline: transparent;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  transition: border-color 250ms ease-in-out;
+}
+
+input:hover,
+textarea:hover{
+  border-color: black;
+}
+
+textarea{
+  height: 80px;
+}
+
+.submit-button{
+  border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+    display: inline;
+    width: fit-content;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    background: #4e75ff;
+    transition: background 250ms ease-in-out;
+}
+
+.submit-button:hover{
+  background: #6c8cff;
+}
